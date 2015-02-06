@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>使用PHP导入和导出数据为CSV文件</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="http://127.0.0.1/xubao_manage/jeasyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1/xubao_manage/jeasyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1/xubao_manage/jeasyui/themes/demo.css">
+	<script type="text/javascript" src="http://127.0.0.1/xubao_manage/jeasyui/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="http://127.0.0.1/xubao_manage/jeasyui/js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="http://127.0.0.1/xubao_manage/jeasyui/js/datagrid-detailview.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1/xubao_manage/css/main.css" />
+<style type="text/css">
+.demo{width:400px; height:100px; margin:100px auto}
+.demo p{line-height:32px}
+.btn{width:80px; height:26px; line-height:26px; background:url(btn_bg.gif) repeat-x; border:1px solid #ddd; cursor:pointer}
+</style>
+<script type="text/javascript">
+function checklogin(){		
+		var login = $('#hidden').val();
+		
+		if(login == '0')
+			{
+				alert ("你未登录,请先登录系统.");
+				location.href = '/xubao_manage/user_reg/login.html';}
+	}	
+</script>
+</head>
+
+<body onload="checklogin()">
+<h2>开放查询清单导入</h2>
+	<div class="demo-info" style="margin-bottom:10px">
+		<div class="demo-tip icon-tip">&nbsp;</div>
+		<div id = "userinfo">
+        <p id="p1" > </p>
+		<!-- -Enter search values and press search button中文中文.-->
+		 <script  type="text/javascript" src="imp_info.php"></script></span> 
+		<!-- <script  type="text/javascript">$("#userinfo").append("<span>未登录");</script> -->
+		</div>
+	</div>
+<div id="main">
+  <div class="demo">
+    <form id="addform" action="open_imp.php?action=import" method="post" enctype="multipart/form-data">
+         <p>请选择要导入的CSV文件：<br/><input type="file" name="file"> <input type="submit" class="btn" value="导入CSV">
+    <!--     <input type="button" class="btn" id="exportCSV" value="导出CSV" onClick="window.location.href='do.php?action=export'">		-->
+         </p>
+    </form>
+  </div>
+</div>
+</body>
+</html>
