@@ -1,0 +1,685 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"user",
+				"usercomcode"
+			],
+			[
+				"us",
+				"usercode"
+			],
+			[
+				"up",
+				"updatetime"
+			],
+			[
+				"pro",
+				"proposalno"
+			],
+			[
+				"da",
+				"data_values"
+			],
+			[
+				"print",
+				"printf"
+			],
+			[
+				"ins",
+				"insertdatetime"
+			],
+			[
+				"ind",
+				"indexOfUtil"
+			],
+			[
+				"c",
+				"controlWp"
+			],
+			[
+				"sell",
+				"sellerno"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 380.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"sft",
+				"SFTP: Browse Server…"
+			],
+			[
+				"sf",
+				"SFTP: Browse Server…"
+			],
+			[
+				"sftp",
+				"SFTP: Browse Server…"
+			],
+			[
+				"ftp",
+				"SFTP: Browse Server…"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 160.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read()) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/phpStudy/WWW/xubao_manage",
+		"/E/phpStudy/WWW/xubao_manage/conn",
+		"/E/phpStudy/WWW/xubao_manage/importCSV",
+		"/E/phpStudy/WWW/xubao_manage/user_reg",
+		"/E/phpStudy/WWW/xubao_manage/views",
+		"/E/phpStudy/WWW/xubao_manage/views/device",
+		"/E/phpStudy/WWW/xubao_manage/xubao"
+	],
+	"file_history":
+	[
+		"/E/phpStudy/WWW/xubao_manage/user_reg/reg.php",
+		"/E/phpStudy/WWW/xubao_manage/xubao/xubao_main.php",
+		"/E/phpStudy/WWW/xubao_manage/xubao/xubao_main.html",
+		"/E/phpStudy/WWW/xubao_manage/xubao/update_xubao.php",
+		"/E/phpStudy/WWW/xubao_manage/xb_index.html",
+		"/E/phpStudy/WWW/xubao_manage/xubao_manage.sublime-project",
+		"/E/phpStudy/WWW/xubao_manage/index.html",
+		"/E/phpStudy/WWW/xubao_manage/importCSV/open_imp.html",
+		"/E/phpStudy/WWW/xubao_manage/importCSV/imp_info.php",
+		"/E/phpStudy/WWW/xubao_manage/user_reg/login.php",
+		"/E/phpStudy/WWW/xubao_manage/xubao/info.php",
+		"/E/phpStudy/WWW/xubao_manage/conn/checkip.php",
+		"/E/phpStudy/tmp/xdebug/cache.out.1423293481-E__phpStudy_WWW_xubao_manage_user_reg_login_php",
+		"/E/phpStudy/WWW/xubao/importCSV/open_imp.php",
+		"/E/phpStudy/WWW/xubao_manage/user_reg/login.html",
+		"/E/phpStudy/WWW/xubao_manage/importCSV/open_imp.php",
+		"/E/phpStudy/WWW/xubao_manage/views/device/index.jsp",
+		"/E/phpStudy/WWW/xubao/user_reg/login.html",
+		"/E/phpStudy/WWW/xubao/user_reg/login.php",
+		"/E/phpStudy/WWW/xubao/importCSV/open_imp.html",
+		"/E/phpStudy/WWW/xubao_manage/index.jsp",
+		"/E/phpStudy/WWW/xubao/user_reg/conn.php",
+		"/E/phpStudy/WWW/xubao/dx/dx_info.php",
+		"/E/phpStudy/WWW/xubao/importCSV/imp_info.php",
+		"/E/phpStudy/WWW/xubao/info.php",
+		"/E/phpStudy/WWW/xubao/xubao_main.html",
+		"/E/phpStudy/WWW/xubao/xubao.sublime-project",
+		"/E/phpStudy/WWW/xubao/xubao_main.php",
+		"/E/phpStudy/WWW/xubao/update_xubao.php",
+		"/E/phpStudy/WWW/xubao/dx/dx_main.php",
+		"/E/phpStudy/WWW/xubao/dx/show_form.php",
+		"/E/phpStudy/WWW/xubao/dx/dx_main.html",
+		"/E/phpStudy/WWW/WebContent/views/device/index.jsp",
+		"/E/phpStudy/WWW/xubao/dx/dx_main_date.html",
+		"/E/phpStudy/WWW/xubao/importCSV/index.php",
+		"/E/phpStudy/xubao_data/test.sql",
+		"/D/phpStudy/WWW/xubao/xubao.sublime-workspace",
+		"/D/phpStudy/WWW/xubao/xubao.sublime2-project.sublime-workspace",
+		"/D/phpStudy/WWW/xubao/xubao.sublime2-project.sublime-project",
+		"/D/phpStudy/WWW/xubao/xubao.sublime-project",
+		"/C/Users/Administrator/Desktop/02日常接收/1411/代办事宜",
+		"/C/Users/Administrator/Desktop/jeasyui-app-crud1/conn.php",
+		"/C/Users/Administrator/Downloads/php-crud/php-crud/create.php",
+		"/C/Users/Administrator/Desktop/jeasyui-app-crud1/get_users.php",
+		"/C/Users/Administrator/Desktop/CSS tab.html",
+		"/C/Users/Administrator/Desktop/01数据修正表/11月汇总发票修正",
+		"/C/Users/Administrator/Desktop/01数据修正表/9月汇总发票修正",
+		"/D/view18/总公司/piccsff3rd/WEB-INF/classes/cn/com/picc/sff/queryAnalyze/service/facade/QueryAnalyzeServiceTest.class",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/README.txt",
+		"/D/view18/收付费培训文档/技术培训/createdb工具/initdata/sffkindcode.unl",
+		"/D/view18/收付费培训文档/技术培训/新提数口径/sffmain.4gl",
+		"/D/view18/KH客户信息/KFZSJC_2014.csv",
+		"/C/Users/Administrator/Downloads/Demo (1)/Demo/WD_ZJB_AREA_DIMENSION.iqd",
+		"/C/Users/Administrator/Downloads/Demo (1)/Demo/DEMO.pyj",
+		"/C/Users/Administrator/Downloads/Demo (1)/demo20100415/content.xml",
+		"/C/Users/Administrator/Desktop/01数据修正表/发票问题方案/发票税局和单证系统没有红冲，新收付费红冲了.txt",
+		"/C/Users/Administrator/AppData/Local/Evernote/Evernote/Databases/Attachments/PJSC201444180000000018  渠道修正",
+		"/C/Users/Administrator/Desktop/01数据修正表/修正江泰渠道码.sql",
+		"/C/Users/Administrator/Documents/省cognos 登陆方法",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/qycarsort_nature.unl",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/01_cbMain 2.sql",
+		"/C/Users/Administrator/Desktop/yijue_weijue/CAR_yjpk.sh",
+		"/D/view18/car/qibao_car.sh",
+		"/C/Users/Administrator/Downloads/khkh3.sql",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/db.sql",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/baoquanbaozu.sql",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/vprpinsdb_old94.sh",
+		"/C/Users/Administrator/Downloads/hbydjk.sh",
+		"/D/Tools/cognos/keleyidock.css",
+		"/D/view18/FXQ/fanxiqiancar_4418.unl",
+		"/D/Tools/cognos/VIEW.html",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/yingyun.sql",
+		"/D/Tome4/ToME4-git-dev/game/addons/chn/init.lua",
+		"/D/view18/LPZX/理算元工作量（计算书）.sql",
+		"/C/Users/Administrator/Downloads/密码解密.java",
+		"/C/Users/Administrator/Downloads/密码解密(1).java",
+		"/C/Users/Administrator/Desktop/01数据修正表/发票问题方案/发票税局没打印和作废记录，新收付费已作废，单证已作废.txt",
+		"/C/Users/Administrator/Desktop/01数据修正表/发票问题方案/红冲发票修正.txt",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/createdb.sql",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/03_feeMain.sql",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/01_cbmain.sql",
+		"/D/view18/FXQ/car/tbcar.unl",
+		"/D/view18/FXQ/car/cbcar.unl",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/putdata.sql",
+		"/D/Tools/cognos/QYVIEW.html",
+		"/D/Tools/cognos/FB-Style-Page-Slide-Menu-master/index.html",
+		"/D/view18/car/car_allType.unl",
+		"/C/Users/Administrator/Desktop/01数据修正表/发票问题方案/发票税局作废了，新收付费和单证系统都没作废.txt",
+		"/C/Windows/System32/drivers/etc/host.txt",
+		"/D/view18/view132/createdb.sql",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/Users/Administrator/Desktop/hosts",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/Jsc报案数.sql",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/jiangling_lp.sql",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/周俊杰_自卸车_赔付.sql",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/yh.sql",
+		"/D/Tome4/ToME4-git-dev/game/addons/.keep",
+		"/D/Tome4/ToME4-git-dev/game/addons/zh-cn/init.lua",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/bigCust_100.unl",
+		"/D/view18/car/p_tmp.unl",
+		"/G/新建文件夹/迅雷下载/妾上无妻_派派小说.txt",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/altertb.sql",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/Car_type_list.sql",
+		"/C/Windows/System32/drivers/etc/services",
+		"/D/view18/LPZX/yxh.csv",
+		"/D/Tools/goagent/goagent-3.19/server/gae/app.yaml",
+		"/D/Tools/goagent/goagent-3.19/server/gae/gae.py",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/new5.sh",
+		"/C/Users/Administrator/Desktop/a.html",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/createdb 2.sql",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/VIP2014.sql",
+		"/D/view18/car/vip_list_name.csv",
+		"/D/Tools/cognos/cognos 地址",
+		"/D/Tools/cognos/布局.html",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/viewbk.sql",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/AT_",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/04_carsort.sql",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/procedure_sff.sh",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/cognosdatanew.sh",
+		"/D/view18/时间维度.sql",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/baoan_20140625.csv",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/yidingsun_20140625.csv",
+		"/C/Users/Administrator/Downloads/vehratio.sh",
+		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/baoan.sql",
+		"/D/view18/对比保单的应收预收实收.sql",
+		"/C/Users/Administrator/Desktop/Iframe.html",
+		"/C/Users/Administrator/Desktop/MainWeb.html",
+		"/D/Tools/cognos/布局(源).html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"str_tb",
+			"'];",
+			"');",
+			"br",
+			"br>",
+			"(<br>",
+			"$username",
+			"xubao",
+			"56.241.32.59",
+			"tbinsuredname",
+			",",
+			"delete",
+			"dealflag",
+			"客户服务管理部",
+			"省公司",
+			"row_number() over ( partition by b.city_name order by  a.underwriteflag  asc) as rnum",
+			"oview.ods_car_",
+			"row_number() over ( partition by b.city_name order by  a.underwriteflag  asc) as rnum",
+			"CAST('20140101' AS  DATE FORMAT 'YYYYMMDD') and CAST('20140930' AS  DATE FORMAT 'YYYYMMDD')",
+			"*coalesce(coinsrate,100)/100",
+			"oview.ods_prp_",
+			"RDZA201444180000026100",
+			"RDAA201444180000026100",
+			"DZA2",
+			"*",
+			"RDAA201444180000026100",
+			"$",
+			"; ",
+			"alter table qycbmain add ",
+			"投PYIE200644180021000025或批改申请单号",
+			"000001000001",
+			"渠道名称",
+			"保单号",
+			"渠道代码",
+			"业务来源代码",
+			"scmsdocfeesetdet",
+			"printdealno",
+			"sffBillPrintVisaDe",
+			"PQBB201444180000000360",
+			"正确机构",
+			"00046064 ",
+			"DJHB201444180000000029",
+			"、",
+			"@guangd.picc.com.cn",
+			"sumpremium-1194.70",
+			"DJHB201444080000000004",
+			"应退保费",
+			"多余立案号",
+			"保单号",
+			"渠道码",
+			"渠道码[5]",
+			"000002000001[5,7]",
+			"渠道码",
+			"select settleno from shandler",
+			"select endorseno from phandler",
+			"select certino from handler",
+			"000002000001 ",
+			"渠道码",
+			"渠道码[5]",
+			"scmsdocfeetotal",
+			"渠道码",
+			"渠道码[5]",
+			"错误的渠道码",
+			"O441884002014100000001714",
+			"发票流水号",
+			"发票识别码",
+			"打印流水号",
+			"O441810002014100000000001",
+			"'36288209',\n'36288222',\n'36288295',\n'36288315',\n'36288357',\n'36288373',\n'36288400',\n'36288412',\n'36288555',\n'36288601',\n'36288612',\n'36288628',\n'36288663',\n'36288738',\n'36288813',\n'36288829',\n'36288848',\n'36288857',\n'36288899',\n'36288995',\n'36355443'",
+			"'36288209',\n'36288222',\n'36288295',\n'36288315',\n'36288357',\n'36288373',\n'36288400',\n'36288412',\n'36288555',\n'36288601',\n'36288612',\n'36288628',\n'36288663',\n'36288738',\n'36288813',\n'36288209',\n'36288222',\n'36288295',\n'36288315',\n'36288357',\n'36288373',\n'36288400',\n'36288412',\n'36288555',\n'36288601',\n'36288612',\n'36288628',\n'36288663',\n'36288738',\n'36288813',\n'36288829',\n'36288848',\n'36288857',\n'36288899',\n'36288995',\n'36355443'",
+			"'36288209',\n'36288222',\n'36288295',\n'36288315',\n'36288357',\n'36288373',\n'36288400',\n'36288412',\n'36288555',\n'36288601',\n'36288612',\n'36288628',\n'36288663',\n'36288738',\n'36288813',\n'36288829',\n'36288848',\n'36288857',\n'36288899',\n'36288995',\n'36355443'",
+			" '36352601', '36352606', '36352621', '36352623', '36352626', '36352705', '36305572', '36352131', '36352136', '36352137', '36352152', '36353931', '36353800', '36353710', '36353721', '36353768', '36302876', '36302661', '36302666', '36302785', '36302799'",
+			"01415619",
+			"O441800882014080000002252",
+			"渠道码[5,7]",
+			"feemain",
+			"feemian",
+			"fee",
+			"initorg",
+			"保单号",
+			"440021100084",
+			"渠道码[5,7]",
+			"select settleno from shandler",
+			"select certino from handler",
+			"select endorseno from phandler",
+			"settleno",
+			"错误的职业证号",
+			"正确的销售人员代码",
+			"正确的职业证号",
+			"错误的440021100265",
+			"渠道名称",
+			"渠道码",
+			"保单号",
+			"渠道码[5]",
+			"update",
+			"打印流水号",
+			"printdeallno",
+			"monopoly",
+			"qycarsort",
+			"qymonopoly",
+			"echo",
+			"qymonopoly",
+			"select * from qycbmain_ext;\ntruncate table qycbmain;\ninsert into qycbmain\nqy",
+			"select * from qycbmain_ext;\ntruncate table qycbmain;\ninsert into qycbmain\nqycbmain_ext",
+			"select * from qycbmain_ext;\ntruncate table qycbmain;\ninsert into qycbmain\nqycbmain",
+			"O441881002014040000001063",
+			"phoneno",
+			"打印流水号",
+			"''",
+			"库",
+			"O441881002014040000001063",
+			"background:#a5d237;",
+			"thisrlpremium",
+			"thisstpremium",
+			"投保单号",
+			"gd4400sff3gdb@gd_4400_cw_bcv2:",
+			"ZEM",
+			"44040004",
+			"2014-12-10",
+			"2014-06-20",
+			"590628.19",
+			"700000.00",
+			"PZEM201444040000000018",
+			"TZEM201444040000000021",
+			"-,",
+			"gd4400sff3gdb:\"sff\".",
+			"2012",
+			"|"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"str_eng",
+			"|",
+			"select * ",
+			"客服部",
+			"市公司",
+			"",
+			"'20140101' and '20140930'",
+			"",
+			"RDZA201444180000010159",
+			"RDAA201444180000010159",
+			"DAA2",
+			"registno",
+			"RDZA201444180000010159",
+			"jq",
+			",",
+			" ",
+			"PYIE200644180021000025",
+			"000002000001",
+			"展业人员",
+			"PYIE200644180021000025",
+			"000001000001",
+			"1",
+			"PQBB201444180000000518",
+			"44180088",
+			"DJHB201444180000000031",
+			"','",
+			"",
+			"1728.3",
+			"DJHB201444180000000029",
+			"1194.70",
+			"AECD201444180000101505",
+			"PJSC201444180000000018",
+			"000002000001",
+			"0",
+			"020",
+			"000002000001",
+			"'PJSC201444180000000018'",
+			"000002000001",
+			"000002000001 ",
+			"0",
+			"000002000001 ",
+			"0",
+			"000001000001",
+			"O441800882014110000000953",
+			"14239980",
+			"1405001",
+			"O441885002014100000000325",
+			"O441884002014100000001714",
+			"'24364070',\n'24500683',\n'24438973',\n'24438974',\n'24414879',\n'24524315',\n'04904072',\n'04904085',\n'04904159',\n'04904173',\n'04904223',\n'04904248',\n'04904252',\n'04904254',\n'04904261',\n'04904264',\n'04904277',\n'04904359',\n'04904382',\n'04904390',\n'04904506',\n'04904512',\n'04904551',\n'04904594',\n'04904686',\n'04904748',\n'04904768',\n'04904842',\n'04904866',\n'04904981',\n'04925010',\n'04925021',\n'04925024',\n'04925031',\n'04925111',\n'04925120',\n'04925150',\n'04925196',\n'04925304',\n'04925364',\n'04925391',\n'04925622',\n'24418657',\n'24418730',\n'24528510',\n'24525969',\n'24386496',\n'24386151',\n'22288400',\n'22288341',\n'24386925',\n'22226767',\n'24386032',\n'24386132',\n'24386042',\n'24386052',\n'24386556',\n'24386410',\n'24417600',\n'24437873',\n'24529164',\n'24529179',\n'24529893',\n'22224850',\n'04972979',\n'04946261',\n'13419839',\n'04946224',\n'24365144',\n'13488643',\n'04924719',\n'04924294',\n'24349649',\n'24417291',\n'24417292',\n'24417293',\n'24417294',\n'24417295',\n'24417296',\n'24417297',\n'24417298',\n'24417299',\n'24505140',\n'24386242',\n'24386220',\n'24386229',\n'24365616',\n'24349892',\n'24349887',\n'24349431',\n'22305498',\n'13490157',\n'24349486',\n'22305065',\n'22305066',\n'22305079',\n'22305080',\n'13488331',\n'24437031',\n'24417131',\n'24437589',\n'24505083',\n'24529361'",
+			"'36288209',\n'36288222',\n'36288295',\n'36288315',\n'36288357',\n'36288373',\n'36288400',\n'36288412',\n'36288555',\n'36288601',\n'36288612',\n'36288628',\n'36288663',\n'36288738',\n'36288813',\n'36288829',\n'36288848',\n'36288857',\n'36288899',\n'36288995',\n'36355443'\n",
+			"01411693",
+			"O441810002014100000000001",
+			"110",
+			"PECJ201444180000000067",
+			"211",
+			"'PECJ201444180000000067'",
+			"PECJ201444180000000067",
+			"CX00145148",
+			"",
+			"ZJ09201884",
+			"440021100084",
+			"清远市谊安保险代理有限公司",
+			"440021100265",
+			"PECJ201444180000000067",
+			"2",
+			"printdeallno",
+			"O441884002014060000000624",
+			"printdealno",
+			"qycarsort_mono",
+			"O441800882014080000002252",
+			"O441800882014080000001391",
+			"delete from sffbillprintde where printdeallno in ( '打印流水号');\ndelete from sffsubbillprintde where printdealno in ( '打印流水号');\ndelete from sffbillprintvisade where printdealno in ( '打印流水号');\ndelete from sffbillprintmain where printdealno in ( '打印流水号');\n\nO441800882014080000001391",
+			"'",
+			"O441800882014060000000486",
+			"/*background:#a5d237;*/",
+			"TDZA201444180000038975",
+			"",
+			"QSB",
+			"44182701",
+			"2014-11-30",
+			"2014-07-22",
+			"200000.00",
+			"22690.34",
+			"PQSB201444180000000084",
+			"TQSB201444180000000165",
+			"-",
+			"",
+			"varchar(20),",
+			"','",
+			"T441825002014060000000371",
+			"Y441825002014060000000369",
+			"]",
+			"[",
+			"",
+			"Listbox2",
+			"Listbox1",
+			",",
+			";",
+			",",
+			"gd4400sff3gdb@gd_4400_cw_bcv2:sffininterface",
+			"958.80",
+			"'1890.00'",
+			"1625.60",
+			"1625.6",
+			"DJHA201444180000000010 ",
+			"1305001",
+			"O441800882014050000000958",
+			"O441881002013120000000434",
+			"4400000034354955",
+			"44180088",
+			",",
+			"240000",
+			"360000",
+			"36000",
+			"156264.00",
+			"204000.00",
+			"PDAA201444180000001519",
+			"黄桂荣",
+			"'",
+			"1275",
+			"EZFG201444180000000136",
+			"EZFG201444180000000136 ",
+			"PZFG201344180000000078",
+			"EZFG201444180000000136 ",
+			"DZFG201444180000000162",
+			"'2014-04-03'",
+			"2014-04-03 00:00:00",
+			"PEAC201344180000000208"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 130.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"project": "xubao_manage.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"restore_index":
+			{
+				"29":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"30":
+				{
+					"group": 0,
+					"index": 1
+				},
+				"35":
+				{
+					"group": 0,
+					"index": 2
+				},
+				"37":
+				{
+					"group": 0,
+					"index": 4
+				},
+				"38":
+				{
+					"group": 0,
+					"index": 6
+				},
+				"41":
+				{
+					"group": 0,
+					"index": 5
+				},
+				"44":
+				{
+					"group": 0,
+					"index": 3
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 268.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

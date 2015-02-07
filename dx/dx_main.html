@@ -1,0 +1,145 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="keywords" content="jquery,ui,easy,easyui,web">
+	<meta name="description" content="easyui help you build your web page easily!">
+	<title>电销-脱保信息查询</title>
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1/xubao/jeasyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1/xubao/jeasyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="http://127.0.0.1/xubao/jeasyui/themes/demo.css">
+	<script type="text/javascript" src="http://127.0.0.1/xubao/jeasyui/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="http://127.0.0.1/xubao/jeasyui/js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="http://127.0.0.1/xubao/jeasyui/js/datagrid-detailview.js"></script>
+	<script type="text/javascript">
+       $(function(){
+			$('#tt').datagrid({
+				view: detailview,
+				detailFormatter:function(index,row){
+					return '<div class="ddv"></div>';
+				},
+				onExpandRow: function(index,row){
+					var ddv = $(this).datagrid('getRowDetail',index).find('div.ddv');
+					ddv.panel({
+						border:false,
+						cache:true,
+						href:'show_form.php?index='+index,
+						onLoad:function(){
+							$('#tt').datagrid('fixDetailRowHeight',index);
+							$('#tt').datagrid('selectRow',index);
+							$('#tt').datagrid('getRowDetail',index).find('form').form('load',row);
+						}
+					});
+					$('#tt').datagrid('fixDetailRowHeight',index);
+				}
+			});
+		});
+		function doSearch(){
+			$('#tt').datagrid('load',{
+				engineno: $('#engineno').val(),
+				licenseno: $('#licenseno').val()
+			});
+		}
+
+		function saveItem(index){
+			var row = $('#tt').datagrid('getRows')[index];
+			var url = row.isNewRecord ? 'save_user.php' : 'update_dx.php?proposalno='+row.proposalno;
+			$('#tt').datagrid('getRowDetail',index).find('form').form('submit',{
+				url: url,
+				onSubmit: function(){
+					return $(this).form('validate');
+				},
+				success: function(data){
+					data = eval('('+data+')');
+					data.isNewRecord = false;
+					$('#tt').datagrid('collapseRow',index);
+					$('#tt').datagrid('updateRow',{
+						index: index,
+						row: data
+					});
+				}
+			});
+		}
+    function cancelItem(index){
+			var row = $('#tt').datagrid('getRows')[index];
+			if (row.isNewRecord){
+				$('#tt').datagrid('deleteRow',index);
+			} else {
+				$('#tt').datagrid('collapseRow',index);
+			}
+		}
+	function checklogin(){		
+		var login = $('#hidden').val();
+		
+		if(login == '0')
+			{
+				alert ("你未登录,请先登录系统.");
+				location.href = '/xubao/user_reg/login.html';}
+	}	
+	</script>
+</head>
+
+<body  onload="checklogin()"> 
+<!--   oncopy="alert('对不起，禁止复制！');return false;"  -->
+
+	<h2>电销——客户信息查询
+	</h2>
+	<div class="demo-info" style="margin-bottom:10px">
+		<div class="demo-tip icon-tip">&nbsp;</div>
+		<div id = "userinfo">
+        <!-- <p id="p1" > </p> -->
+		<!-- -Enter search values and press search button中文中文.-->
+		 <script  type="text/javascript" src="dx_info.php"></script></span> 
+		<!-- <script  type="text/javascript">$("#userinfo").append("<span>未登录");</script> -->
+		</div>
+	</div>
+	<div class="easyui-tabs" style="width:1000px;height:650px">
+    <div title = '当期脱保信息' style="padding:10px;-moz-user-select:none;" unselectable="on" onselectstart="return false;">
+	<table id="tt" class="easyui-datagrid" 	style="height:580px" url="dx_main.php" title="Searching" iconCls="icon-search" toolbar="#tb"   fitColumns="true" singleSelect="true"pagination="true">
+		<thead>
+			<tr>
+				<th field="proposalno" width="80">投保单号</th>
+				<th field="licenseno" width="60">车牌号码</th>
+				<th field="tbinsuredname" width="80" align="right">客户姓名</th>
+				<th field="cifphone" width = "80" align="right">CIF电话</th>
+				<th field="lpphone" width="80" align="right">理赔电话</th>
+				<th field="othphone1" width="80" align="right">匹配电话</th>
+			</tr>
+		</thead>
+	</table>
+	<div id="tb" style="padding:3px">
+		<span>发动机号码:</span>
+		<input id="engineno" style="border:1px solid #ccc">
+		<span>车牌号码:</span>
+		<input id="licenseno" style="border:1px solid #ccc">
+		<a href="#" class="easyui-linkbutton" plain="true" onclick="doSearch()">Search</a>
+	</div>
+</div><!-- div 到期信息-->
+<div title = '往期脱保信息'  closable="true" style="padding:10px;">
+	<table id="tb_tt" class="easyui-datagrid" 	style="height:580px" url="xubao_main.php" title="Searching" iconCls="icon-search" toolbar="#tb_tb"   fitColumns="true" singleSelect="true"pagination="true">
+		<thead>
+			<tr>
+				<th field="proposalno" width="80">投保单号</th>
+				<th field="licenseno" width="60">车牌号码</th>
+				<th field="tbinsuredname" width="80" align="right">客户姓名</th>
+				<th field="cifphone" width = "80" align="right">CIF电话</th>
+				<th field="lpphone" width="80" align="right">理赔电话</th>
+				<th field="othphone1" width="80" align="right">匹配电话</th>
+			</tr>
+		</thead>
+	</table>
+	<div id="tb_tb" style="padding:3px">
+		<span>发动机号码:</span>
+		<input id="tb_engineno" style="line-height:26px;border:1px solid #ccc">
+		<span>车牌号码:</span>
+		<input id="tb_licenseno" style="line-height:26px;border:1px solid #ccc">
+		<a href="#" class="easyui-linkbutton" plain="true" onclick="doSearch()">Search</a>
+	</div>
+</div>
+</div>
+<!--禁止另存为-->
+<noscript> 
+<iframe src="*.htm"></iframe> 
+<!--禁止另存为-->
+</noscript> 
+</body>
+</html>

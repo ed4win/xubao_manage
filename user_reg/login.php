@@ -2,51 +2,62 @@
  define('IN_SYS', TRUE);
 session_start();
 
-//×¢ÏúµÇÂ¼
+//æ³¨é”€ç™»å½•
 if(isset($_GET['action'])){
     if($_GET['action'] == "logout"){
         unset($_SESSION['userid']);
         unset($_SESSION['username']);
         unset($_SESSION['power']);
-        echo '×¢ÏúµÇÂ¼³É¹¦£¡µã»÷´Ë´¦ <a href="login.html">µÇÂ¼</a>';
+        echo 'æ³¨é”€ç™»å½•æˆåŠŸï¼ç‚¹å‡»æ­¤å¤„ <a href="login.html">ç™»å½•</a>';
         exit;
     }
 }
 
-//µÇÂ¼
+//ç™»å½•
 if(!isset($_POST['submit'])){
-	exit('·Ç·¨·ÃÎÊ!');
+	exit('éæ³•è®¿é—®!');
 }
 $username = htmlspecialchars($_POST['username']);
 $pass= ($_POST['password']);
 $password = MD5($_POST['password']);
 include('../conn/checkip.php');
 $currentIP = getip();
+$logintime = date('Y-m-d H:i:s');
 //echo $pass;
-//°üº¬Êı¾İ¿âÁ¬½ÓÎÄ¼ş
+//åŒ…å«æ•°æ®åº“è¿æ¥æ–‡ä»¶
 include('../conn/conn.php');
-//¼ì²âÓÃ»§Ãû¼°ÃÜÂëÊÇ·ñÕıÈ·
-$check_query = mysql_query("select userid,power from user where username='$username' and password='$password'and ip = '$currentIP' limit 1");
+//æ£€æµ‹ç”¨æˆ·ååŠå¯†ç æ˜¯å¦æ­£ç¡®
+$check_query = mysql_query("select userid,power,usercname,comcode from user where username='$username' and password='$password'and ip = '$currentIP' limit 1");
+
 if (!$check_query) { // add this check.
     die('Invalid query2: ' . mysql_error());
 }
 if($result = mysql_fetch_array($check_query)){
-	//µÇÂ¼³É¹¦
-	$_SESSION['username'] = $username;
+	//ç™»å½•æˆåŠŸ
+	$_SESSION['username'] = $result['usercname'];
+    $_SESSION['usercode'] = $username;
+    $_SESSION['comcode'] = $result['comcode'];
 	$_SESSION['userid'] = $result['userid'];
     $_SESSION['power'] = $result['power'];
-	//echo $username,' »¶Ó­Äã£¡½øÈë <a href="my.php">ÓÃ»§ÖĞĞÄ</a><br />';
-	//echo 'µã»÷´Ë´¦ <a href="login.php?action=logout">×¢Ïú</a> µÇÂ¼£¡<br />';
+/*
+è®°å½•ç™»å½•ä¿¡æ¯
+*/
+    $sql = "INSERT INTO loginHistory(username,logintime,loginstatus,ip)VALUES('$username','$logintime','1','$currentIP')";
+    mysql_query($sql,$conn);
+	//echo $username,' æ¬¢è¿ä½ ï¼è¿›å…¥ <a href="my.php">ç”¨æˆ·ä¸­å¿ƒ</a><br />';
+	//echo 'ç‚¹å‡»æ­¤å¤„ <a href="login.php?action=logout">æ³¨é”€</a> ç™»å½•ï¼<br />';
 $url = '';
 if($result['power'] == 1){
-    $url = "../index.html";  //Òª×¢ÒâÌø×ªÂ·¾¶
+    $url = "../xb_index.html";  //è¦æ³¨æ„è·³è½¬è·¯å¾„
     echo "<script type='text/javascript'>";
     echo "window.location.href='$url'";  
     echo "</script>";
-	exit;
+	//echo $result['comcode'],'<br/>';
+    //echo $_SESSION['comcode'];
+    exit;
     } 
 elseif ($result['power'] == 2){
-    $url = "../index.html";  //Òª×¢ÒâÌø×ªÂ·¾¶
+    $url = "../index.html";  //è¦æ³¨æ„è·³è½¬è·¯å¾„
     echo "<script type='text/javascript'>";
     echo "window.location.href='$url'";  
     echo "</script>";
@@ -54,7 +65,9 @@ elseif ($result['power'] == 2){
     } 
 }else {
     //echo $check_query;
-    echo 'ip',$currentIP;
-	exit('µÇÂ¼Ê§°Ü£¡µã»÷´Ë´¦ <a href="javascript:history.back(-1);">·µ»Ø</a> ÖØÊÔ');
+    $sql = "INSERT INTO user(username,logintime,loginstatus,ip)VALUES('$username','$logintime','0','$currentIP')";
+    mysql_query($sql,$conn);
+    echo 'ip:',$currentIP;
+	exit('ç™»å½•å¤±è´¥ï¼ç‚¹å‡»æ­¤å¤„ <a href="javascript:history.back(-1);">è¿”å›</a> é‡è¯•');
 }
 ?>
