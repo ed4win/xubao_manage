@@ -8,7 +8,7 @@
 	],
     "settings": {
         "xdebug": {
-             "url":"http://127.0.0.1/xubao_manage/"
+             "url":"http://127.0.0.1/xubao_manage/xubao/"   
         }
     }
 }

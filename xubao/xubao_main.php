@@ -13,9 +13,14 @@ define('IN_SYS', TRUE);
 	//mysql_query("SET NAMES utf-8");
 	include ('../conn/conn.php');
 	//mysql_real_escape_string() 防止依赖注入,但是要考虑连接的当前字符集
-	$engineno = isset($_POST['engineno']) ? mysql_real_escape_string($_POST['engineno']) : 'adc3949ba59abbe56';
-	$licenseno = isset($_POST['licenseno']) ? mysql_real_escape_string($_POST['licenseno']) : 'adc3949ba59abbe56';
+	$engineno = isset($_POST['engineno']) ? mysql_real_escape_string($_POST['engineno']) : '123abcefg456';
+	$licenseno = isset($_POST['licenseno']) ? mysql_real_escape_string($_POST['licenseno']) : '123abc456efg';
 	//echo "tb-2333",$_POST['engineno'],"</br>";
+	$str_licen = strlen($licenseno);
+	$str_eng = strlen($engineno);
+	if($str_licen==12 && $str_eng==12){
+		exit();
+	}
 	$userid = $_SESSION['userid'];
 	$username = $_SESSION['username'];
 	$usercode = $_SESSION['usercode'];
@@ -35,8 +40,7 @@ define('IN_SYS', TRUE);
 	$result = array();
 	$where = '';
 	$tbflag ='and tbflag = "1" and  xbflag = "0" ' ;
-	$str_licen = strlen($licenseno);
-	$str_eng = strlen($engineno);
+
 	/*
 	//判断查询关键字,优先保存车牌号,放弃
 	if($str_licen==0){
@@ -64,6 +68,7 @@ define('IN_SYS', TRUE);
 		$where .= "engineno = '$engineno' and licenseno = '$licenseno'   and     substr(comcode,1,6) = '$user_com' ";
 	}
 }else{
+
     if($str_licen==0){
 		$where .=  "engineno = '$engineno'  ";
 	}
@@ -76,25 +81,29 @@ define('IN_SYS', TRUE);
 }
 	//echo 'BUGBANG!',$where,'STR:',$str_eng,'--STR2:',$str_licen;
 	  
-	$rs = mysql_query("select count(1) from xubaomain where " . $where . $tbflag)
-	or die("无效查询: " . mysql_error());
+	//$rs = mysql_query("select count(1) from xubaomain where " . $where . $tbflag)
+	//or die("无效查询: " . mysql_error());
+	$rs = $dbh->query("select count(1) from xubaomain where " . $where . $tbflag)
+	or die("无效查询: " . $rs->errorInfo());
 	//echo 'select ',$rs;
-	$row = mysql_fetch_row($rs);
+	//$row = mysql_fetch_row($rs);
+	$row = $rs->fetch(PDO::FETCH_NUM);
 	if($row[0] >= 1)//仅记录有效查询,主要原因系统加载时时会会插入一条无效的记录.
 		{
 			$searchSQL = "INSERT INTO operatesearchhistory(usercode,username,usercomcode,engineno,licenseno,searchtime) VALUES ('$usercode','$username','$user_com','$engineno','$licenseno','$searchtime') ";
-			mysql_query($searchSQL,$conn);
+			//mysql_query($searchSQL,$conn);
+			$dbh->exec($searchSQL);
 		}
 	$result["total"] = $row[0];
 	
-	$rs = mysql_query("select * from xubaomain where " . $where . $tbflag . " limit $offset,$rows");
-	
+	//$rs = mysql_query("select * from xubaomain where " . $where . $tbflag . " limit $offset,$rows");
+	$rs = $dbh->query("select * from xubaomain where " . $where . $tbflag . " limit $offset,$rows");
 	$items = array();
-	while($row = mysql_fetch_object($rs)){
+	//while($row = mysql_fetch_object($rs)){
+	while($row = $rs->fetchobject()){
 		array_push($items, $row);
 	}
-	$result["rows"] = $items;
-	
-
+$result["rows"] = $items;
+	$dbh=null;
 	echo json_encode($result);
 ?>

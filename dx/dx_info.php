@@ -10,12 +10,13 @@ if(!isset($_SESSION['userid'])||($_SESSION['power']<>2)){
 else{
 define('IN_SYS', TRUE);
 //包含数据库连接文件
-include('../conn.php');
+include('../conn/conn.php');
 $userid = $_SESSION['userid'];
 $username = $_SESSION['username'];
-$user_query = mysql_query("select * from user where userid=$userid limit 1");
-$row = mysql_fetch_array($user_query);
-include('../checkip.php');
+$user_com = $_SESSION['comcode'];
+//$user_query = mysql_query("select * from user where userid=$userid limit 1");
+//$row = mysql_fetch_array($user_query);
+include('../conn/checkip.php');
 $IP = getip();
 //echo 'document.write("用户信息:';
 //echo '用户ID:',$userid,'");';
@@ -29,7 +30,7 @@ $IP = getip();
 //echo '<input id = "hidden" type = ""  value="',$login,'" />';
 
 //jquery 输出
-echo  '$("#userinfo").append(" <span>欢迎你,&nbsp;',$username,'&nbsp;你的归属机构:&nbsp;',$row['comcode'];
+echo  '$("#userinfo").append(" <span>欢迎你,&nbsp;',$username,'&nbsp;你的归属机构:&nbsp;',$user_com;
 echo  '&nbsp,你目前的IP地址:',$IP;
 echo   '&nbsp;,<a href=\"../user_reg/login.php?action=logout\">注销</a> 登录<span/><span><input id = \"hidden\" type = \"hidden\"  value=\"1\"></input></span>.");';
 }

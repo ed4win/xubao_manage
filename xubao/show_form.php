@@ -17,6 +17,12 @@
 			<td><input name="vinno" class="easyui-validatebox"  readonly></input></td>
 		</tr>
 		<tr>
+			<td>匹配电话2</td>
+			<td><input name="othphone2" class="easyui-validatebox"  readonly></input></td>
+			<td>匹配电话3</td>
+			<td><input name="othphone3" class="easyui-validatebox"  readonly></input></td>
+		</tr>
+		<tr>
 			<td>身份证号码</td>
 			<td><input name="tbidnumber" class="easyui-validatebox"  readonly></input></td>
 			<td>终保日期</td>
@@ -27,7 +33,9 @@
   			<option value="1">CIF有效</option>
   			<option value="2">理赔</option>
   			<option value="3">匹配电话1</option>
-  			<option value="4">全无效</option>
+  			<option value="4">匹配电话2</option>
+  			<option value="5">匹配电话3</option>
+  			<option value="9">全无效</option>
 			</select></td>
 		</tr>
 		<!-- 

@@ -25,8 +25,11 @@ $sql = "UPDATE xubaomain set phoneflag ='$phoneflag',jinduflag = '$jinduflag' ,r
 $updatesql = "INSERT INTO operateUpdatehistory(usercode,username,usercomcode,update_proposalno,updatetime) values ('$usercode','$username','$user_com','$proposalno','$updatetime')";
 //$updatesql = "INSERT INTO operateUpdatehistory(usercode)VALUES('1111')";
 //echo $updatesql;
-@mysql_query($sql);
-mysql_query($updatesql,$conn);
+//@mysql_query($sql);
+$dbh->exec($sql);
+//mysql_query($updatesql,$conn);
+$dbh->exec($updatesql);
+$dbh = null;
 //if (!$check_query) { // add this check.
 //    die('Invalid query: ' . mysql_error());
 //}

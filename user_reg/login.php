@@ -27,12 +27,15 @@ $logintime = date('Y-m-d H:i:s');
 //包含数据库连接文件
 include('../conn/conn.php');
 //检测用户名及密码是否正确
-$check_query = mysql_query("select userid,power,usercname,comcode from user where username='$username' and password='$password'and ip = '$currentIP' limit 1");
-
+//$check_query = mysql_query("select userid,power,usercname,comcode from user where username='$username' and password='$password'and ip = '$currentIP' limit 1");
+$check_query = $dbh->query("select userid,power,usercname,comcode from user where username='$username' and password='$password'and ip = '$currentIP' limit 1");
 if (!$check_query) { // add this check.
-    die('Invalid query2: ' . mysql_error());
+    //die('Invalid query: ' . mysql_error());
+    die('Invalid query: '. $dbh->errorCode());
 }
-if($result = mysql_fetch_array($check_query)){
+//if($result = mysql_fetch_array($check_query)){
+if($result = $check_query->fetch()){
+    var_dump($result);
 	//登录成功
 	$_SESSION['username'] = $result['usercname'];
     $_SESSION['usercode'] = $username;
@@ -43,7 +46,9 @@ if($result = mysql_fetch_array($check_query)){
 记录登录信息
 */
     $sql = "INSERT INTO loginHistory(username,logintime,loginstatus,ip)VALUES('$username','$logintime','1','$currentIP')";
-    mysql_query($sql,$conn);
+    $dbh->exec($sql);
+    $dbh = null;
+    //mysql_query($sql,$conn);
 	//echo $username,' 欢迎你！进入 <a href="my.php">用户中心</a><br />';
 	//echo '点击此处 <a href="login.php?action=logout">注销</a> 登录！<br />';
 $url = '';
@@ -57,6 +62,13 @@ if($result['power'] == 1){
     exit;
     } 
 elseif ($result['power'] == 2){
+    $url = "../dx_index.html";  //要注意跳转路径
+    echo "<script type='text/javascript'>";
+    echo "window.location.href='$url'";  
+    echo "</script>";
+    exit;
+    } 
+    elseif ($result['power'] == 3){
     $url = "../index.html";  //要注意跳转路径
     echo "<script type='text/javascript'>";
     echo "window.location.href='$url'";  
@@ -66,7 +78,8 @@ elseif ($result['power'] == 2){
 }else {
     //echo $check_query;
     $sql = "INSERT INTO user(username,logintime,loginstatus,ip)VALUES('$username','$logintime','0','$currentIP')";
-    mysql_query($sql,$conn);
+    //mysql_query($sql,$conn);
+    $dbh->exec($sql);
     echo 'ip:',$currentIP;
 	exit('登录失败！点击此处 <a href="javascript:history.back(-1);">返回</a> 重试');
 }
