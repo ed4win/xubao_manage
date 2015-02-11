@@ -4,12 +4,24 @@
 		"selected_items":
 		[
 			[
-				"a",
-				"align	Attr"
+				"ed",
+				"eddate1"
+			],
+			[
+				"st",
+				"stdate1"
+			],
+			[
+				"userc",
+				"usercomcode"
 			],
 			[
 				"user",
-				"user_com"
+				"usercname"
+			],
+			[
+				"a",
+				"align	Attr"
 			],
 			[
 				"up",
@@ -63,157 +75,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "conn/conn.php",
-			"settings":
-			{
-				"buffer_size": 864,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "user_reg/login.php",
-			"settings":
-			{
-				"buffer_size": 2736,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "importCSV/imp_info.php",
-			"settings":
-			{
-				"buffer_size": 1288,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.html",
-			"settings":
-			{
-				"buffer_size": 4165,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<?php\n/*****************************\n*数据库连接\n*****************************/\n$conn = @mysql_connect(\"localhost\",\"root\",\"root\");\nif (!$conn){\n	die(\"连接数据库失败：\" . mysql_error());\n}\nmysql_select_db(\"test\", $conn);\n//字符转换，读库\nmysql_query(\"set character set 'gbk'\");\n//写库\nmysql_query(\"set names 'gbk'\");\n?>",
-			"file": "user_reg/conn.php",
-			"file_size": 331,
-			"file_write_time": 130676666190693594,
-			"settings":
-			{
-				"buffer_size": 296,
-				"line_ending": "Windows",
-				"scratch": true
-			}
-		},
-		{
-			"file": "xb_index.html",
-			"settings":
-			{
-				"buffer_size": 4126,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "dx_index.html",
-			"settings":
-			{
-				"buffer_size": 4126,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/E/phpStudy/WWW/xubao/user_reg/login.php",
-			"settings":
-			{
-				"buffer_size": 2736,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "dx/dx_info.php",
-			"settings":
-			{
-				"buffer_size": 1320,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "dx/update_dx.php",
-			"settings":
-			{
-				"buffer_size": 1494,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/D/Program Files/putty-gdi-20130306/x64/test.sh",
-			"settings":
-			{
-				"buffer_size": 207,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "dx/dx_main.php",
-			"settings":
-			{
-				"buffer_size": 3596,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "dx/dx_main.html",
-			"settings":
-			{
-				"buffer_size": 4188,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "xubao/xubao_main.php",
-			"settings":
-			{
-				"buffer_size": 3407,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "xubao_manage.sublime-project",
-			"settings":
-			{
-				"buffer_size": 189,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "xubao/debug_test.php",
-			"settings":
-			{
-				"buffer_size": 1206,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "xubao/show_form.php",
-			"settings":
-			{
-				"buffer_size": 3057,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "<form method=\"post\">\n	<table class=\"dv-table\" style=\"width:100%;background:#fafafa;padding:5px;margin-top:5px;\">\n		<tr>\n			<td>机构名称</td>\n			<td><input name=\"comcode\" class=\"easyui-validatebox\"  readonly></input></td>\n			<td>使用性质</td>\n			<td><input name=\"carkindcode\" class=\"easyui-validatebox\" ></input></td>\n			<td>车型</td>\n			<td><input name=\"brandname\" class=\"easyui-validatebox\"  readonly></input></td>\n		</tr>\n		<tr>\n			<td>客户代码</td>\n			<td><input name=\"tbinsuredcode\" class=\"easyui-validatebox\"  readonly></input></td>\n			<td>发动机号码</td>\n			<td><input name=\"engineno\" class=\"easyui-validatebox\" ></input></td>\n			<td>车架号</td>\n			<td><input name=\"vinno\" class=\"easyui-validatebox\"  readonly></input></td>\n		</tr>\n		<tr>\n			<td>匹配电话2</td>\n			<td><input name=\"othphone2\" class=\"easyui-validatebox\"  readonly></input></td>\n			<td>匹配电话3</td>\n			<td><input name=\"othphone3\" class=\"easyui-validatebox\"  readonly></input></td>\n		</tr>\n		<tr>\n			<td>身份证号码</td>\n			<td><input name=\"tbidnumber\" class=\"easyui-validatebox\"  readonly></input></td>\n			<td>终保日期</td>\n			<td><input name=\"enddate\" class=\"easyui-validatebox\"  readonly></input></td>\n			<td>有效号码</td>\n			<td><select name=\"phoneflag\" class=\"easyui-validatebox\">\n  			<option value=\"0\">初始</option>\n  			<option value=\"1\">CIF有效</option>\n  			<option value=\"2\">理赔</option>\n  			<option value=\"3\">匹配电话1</option>\n  			<option value=\"4\">匹配电话2</option>\n  			<option value=\"5\">匹配电话3</option>\n  			<option value=\"9\">全无效</option>\n			</select></td>\n		</tr>\n		<!-- \n		<tr>\n			<td rowspan=3>跟进状态</td>\n		<td>\n			初始状态:<input type=\"radio\"  name=\"Sex\" value=\"male\" class=\"easyui-validatebox\" />\n			首次跟踪:<input type=\"radio\"  name=\"Sex\" value=\"male\" class=\"easyui-validatebox\" />\n		</td>\n		<td rowspan=3>备注</td>\n		<td rowspan=3 colspan=3><input name=\"tbidnumber\" class=\"easyui-validatebox\"  readonly></input></td>\n		</tr>\n		<tr>\n		<td>\n			二次跟踪:<input type=\"radio\"  name=\"Sex\" value=\"male\" class=\"easyui-validatebox\"/>\n			三次成功:<input type=\"radio\"  name=\"Sex\" value=\"male\" class=\"easyui-validatebox\"/>\n		</td>	\n		</tr>\n		<td>\n			跟踪成功:<input type=\"radio\"  name=\"Sex\" value=\"male\" class=\"easyui-validatebox\"/>\n			跟踪失败:<input type=\"radio\" name=\"Sex\" value=\"female\" class=\"easyui-validatebox\"/>\n		</td>\n		-->	\n		<tr>\n			<td>跟进状态</td>\n			<td>\n				<input class=\"easyui-combobox\" name='jinduflag' data-options=\"\n		valueField: 'value',\n		textField: 'label',\n		data: [{\n			label: '首次跟踪',\n			value: 'f'\n		},{\n			label: '二次跟踪',\n			value: 's'\n		},{\n			label: '三次跟踪',\n			value: 't'\n		},{\n			label: '续保成功',\n			value: 'S'\n		},{\n			label: '跟踪失败',\n			value: 'F'\n		}]\" />\n			</td>\n			<td>备注</td>\n		<td colspan=3><input name=\"remark\" style = \"width: 95%;\" ></input></td>\n	</tr>\n	</table>\n	<div style=\"padding:5px 0;text-align:right;padding-right:30px\">\n		<a href=\"#\" class=\"easyui-linkbutton\" iconCls=\"icon-save\" plain=\"true\" onclick=\"saveItem(<?php echo $_REQUEST['index'];?>)\">Save</a>\n		<a href=\"#\" class=\"easyui-linkbutton\" iconCls=\"icon-cancel\" plain=\"true\" onclick=\"cancelItem(<?php echo $_REQUEST['index'];?>)\">Cancel</a>\n	</div>\n</form>\n\n",
-			"file": "dx/show_form.php",
-			"file_size": 3391,
-			"file_write_time": 130679513420891927,
-			"settings":
-			{
-				"buffer_size": 3057,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -287,6 +148,30 @@
 	],
 	"file_history":
 	[
+		"/E/phpStudy/WWW/xubao_manage/dx/show_form.php",
+		"/E/phpStudy/WWW/xubao_manage/xubao/show_form.php",
+		"/E/phpStudy/WWW/xubao_manage/xubao/debug_test.php",
+		"/E/phpStudy/WWW/xubao_manage/xubao_manage.sublime-project",
+		"/E/phpStudy/WWW/xubao_manage/xubao/xubao_main.php",
+		"/E/phpStudy/WWW/xubao_manage/dx/dx_main.html",
+		"/E/phpStudy/WWW/xubao_manage/dx/dx_main.php",
+		"/D/Program Files/putty-gdi-20130306/x64/test.sh",
+		"/E/phpStudy/WWW/xubao_manage/dx/update_dx.php",
+		"/E/phpStudy/WWW/xubao_manage/dx/dx_info.php",
+		"/E/phpStudy/WWW/xubao_manage/xubao/xubao_main.html",
+		"/E/phpStudy/WWW/xubao_manage/dx_index.html",
+		"/E/phpStudy/WWW/xubao_manage/xb_index.html",
+		"/E/phpStudy/WWW/xubao_manage/user_reg/conn.php",
+		"/E/phpStudy/WWW/xubao_manage/conn/conn.php",
+		"/E/phpStudy/WWW/xubao_manage/user_reg/login.php",
+		"/E/phpStudy/WWW/xubao_manage/dx/dx_main_date.php",
+		"/E/phpStudy/WWW/xubao_manage/dx/dx_main_date.html",
+		"/E/phpStudy/WWW/xubao_manage/importCSV/operateInfo.html",
+		"/E/phpStudy/WWW/xubao_manage/importCSV/operateInfo.php",
+		"/E/phpStudy/WWW/xubao_manage/importCSV/open_imp.html",
+		"/E/phpStudy/WWW/xubao_manage/importCSV/imp_info.php",
+		"/E/phpStudy/WWW/xubao_manage/index.html",
+		"/E/phpStudy/WWW/xubao/user_reg/login.php",
 		"/C/Users/Administrator/Desktop/operatesearchhistory.sql",
 		"/C/Users/Administrator/Desktop/脱保导入_201502-03.txt",
 		"/E/phpStudy/WWW/xubao_manage/xubao/debug_test",
@@ -295,15 +180,7 @@
 		"/E/phpStudy/WWW/l.php",
 		"/E/phpStudy/WWW/xubao_manage/xubao/update_xubao.php",
 		"/E/phpStudy/WWW/xubao_manage/xubao/info.php",
-		"/E/phpStudy/WWW/xubao_manage/xubao_manage.sublime-project",
 		"/E/phpStudy/WWW/xubao_manage/user_reg/reg.php",
-		"/E/phpStudy/WWW/xubao_manage/xubao/xubao_main.php",
-		"/E/phpStudy/WWW/xubao_manage/xubao/xubao_main.html",
-		"/E/phpStudy/WWW/xubao_manage/xb_index.html",
-		"/E/phpStudy/WWW/xubao_manage/index.html",
-		"/E/phpStudy/WWW/xubao_manage/importCSV/open_imp.html",
-		"/E/phpStudy/WWW/xubao_manage/importCSV/imp_info.php",
-		"/E/phpStudy/WWW/xubao_manage/user_reg/login.php",
 		"/E/phpStudy/WWW/xubao_manage/conn/checkip.php",
 		"/E/phpStudy/tmp/xdebug/cache.out.1423293481-E__phpStudy_WWW_xubao_manage_user_reg_login_php",
 		"/E/phpStudy/WWW/xubao/importCSV/open_imp.php",
@@ -311,7 +188,6 @@
 		"/E/phpStudy/WWW/xubao_manage/importCSV/open_imp.php",
 		"/E/phpStudy/WWW/xubao_manage/views/device/index.jsp",
 		"/E/phpStudy/WWW/xubao/user_reg/login.html",
-		"/E/phpStudy/WWW/xubao/user_reg/login.php",
 		"/E/phpStudy/WWW/xubao/importCSV/open_imp.html",
 		"/E/phpStudy/WWW/xubao_manage/index.jsp",
 		"/E/phpStudy/WWW/xubao/user_reg/conn.php",
@@ -399,22 +275,7 @@
 		"/C/Windows/System32/drivers/etc/services",
 		"/D/view18/LPZX/yxh.csv",
 		"/D/Tools/goagent/goagent-3.19/server/gae/app.yaml",
-		"/D/Tools/goagent/goagent-3.19/server/gae/gae.py",
-		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/new5.sh",
-		"/C/Users/Administrator/Desktop/a.html",
-		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/createdb 2.sql",
-		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/VIP2014.sql",
-		"/D/view18/car/vip_list_name.csv",
-		"/D/Tools/cognos/cognos 地址",
-		"/D/Tools/cognos/布局.html",
-		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/viewbk.sql",
-		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/AT_",
-		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/04_carsort.sql",
-		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/procedure_sff.sh",
-		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/cognosdatanew.sh",
-		"/D/view18/时间维度.sql",
-		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/baoan_20140625.csv",
-		"/C/Users/Administrator/AppData/Local/Temp/fz3temp-1/yidingsun_20140625.csv"
+		"/D/Tools/goagent/goagent-3.19/server/gae/gae.py"
 	],
 	"find":
 	{
@@ -432,6 +293,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"56.241.32.59/xubao",
+			"59/xubao",
+			".php",
+			"ge_main",
+			"xubao",
 			"othphone",
 			"th",
 			"设备类别",
@@ -554,12 +420,7 @@
 			"thisstpremium",
 			"投保单号",
 			"gd4400sff3gdb@gd_4400_cw_bcv2:",
-			"ZEM",
-			"44040004",
-			"2014-12-10",
-			"2014-06-20",
-			"590628.19",
-			"700000.00"
+			"ZEM"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -705,551 +566,8 @@
 	"groups":
 	[
 		{
-			"selected": 12,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "conn/conn.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 864,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								557,
-								557
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 121.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 17,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "user_reg/login.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2736,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2286,
-								2286
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 880.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 16,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "importCSV/imp_info.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1288,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1246,
-								1246
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 15,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4165,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2795,
-								2795
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 120.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "user_reg/conn.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 296,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"in_converting": true,
-							"origin_encoding": "GBK",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "xb_index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4126,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2928,
-								2928
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1340.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "dx_index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4126,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2755,
-								2755
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1320.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/E/phpStudy/WWW/xubao/user_reg/login.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2736,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								531,
-								531
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "dx/dx_info.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1320,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1124,
-								1124
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 3.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 14,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "dx/update_dx.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1494,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1494,
-								1494
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "/D/Program Files/putty-gdi-20130306/x64/test.sh",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 207,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								107,
-								107
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/ShellScript/Shell-Unix-Generic.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "dx/dx_main.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3596,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1211,
-								1211
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 120.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "dx/dx_main.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4188,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2341,
-								2344
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "xubao/xubao_main.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3407,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2627,
-								2627
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1560.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 14,
-					"file": "xubao_manage.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 189,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								167,
-								167
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 15,
-					"file": "xubao/debug_test.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1206,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								657,
-								657
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "ASCII",
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 66.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 16,
-					"file": "xubao/show_form.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3057,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1218,
-								1470
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "dx/show_form.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3057,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								761,
-								769
-							],
-							[
-								861,
-								869
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				}
 			]
 		}
 	],

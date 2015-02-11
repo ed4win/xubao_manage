@@ -42,10 +42,13 @@ if($result = $check_query->fetch()){
     $_SESSION['comcode'] = $result['comcode'];
 	$_SESSION['userid'] = $result['userid'];
     $_SESSION['power'] = $result['power'];
+
+    $usercname = $result['usercname'];
+    $usercomcode = $result['comcode'];
 /*
 记录登录信息
 */
-    $sql = "INSERT INTO loginHistory(username,logintime,loginstatus,ip)VALUES('$username','$logintime','1','$currentIP')";
+    $sql = "INSERT INTO loginHistory(usercode,logintime,loginstatus,ip,username,usercomcode)VALUES('$username','$logintime','1','$currentIP','$usercname','$usercomcode')";
     $dbh->exec($sql);
     $dbh = null;
     //mysql_query($sql,$conn);
@@ -77,7 +80,7 @@ elseif ($result['power'] == 2){
     } 
 }else {
     //echo $check_query;
-    $sql = "INSERT INTO user(username,logintime,loginstatus,ip)VALUES('$username','$logintime','0','$currentIP')";
+    $sql = "INSERT INTO loginHistory(usercode,logintime,loginstatus,ip)VALUES('$username','$logintime','0','$currentIP')";
     //mysql_query($sql,$conn);
     $dbh->exec($sql);
     echo 'ip:',$currentIP;
