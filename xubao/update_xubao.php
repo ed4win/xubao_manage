@@ -21,7 +21,7 @@ $updatetime = date('Y-m-d H:i:s');
 define('IN_SYS', TRUE);
 include ('../conn/conn.php');
 
-$sql = "UPDATE xubaomain set phoneflag ='$phoneflag',jinduflag = '$jinduflag' ,remark = '$remark' where proposalno='$proposalno'";
+$sql = "UPDATE xubaomain set phoneflag ='$phoneflag',jinduflag = '$jinduflag' ,remark = '$remark' ,updatetime  = now() where proposalno='$proposalno'";
 $updatesql = "INSERT INTO operateUpdatehistory(usercode,username,usercomcode,update_proposalno,updatetime) values ('$usercode','$username','$user_com','$proposalno','$updatetime')";
 //$updatesql = "INSERT INTO operateUpdatehistory(usercode)VALUES('1111')";
 //echo $updatesql;
