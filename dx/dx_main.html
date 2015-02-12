@@ -38,6 +38,7 @@
 				engineno: $('#engineno').val(),
 				licenseno: $('#licenseno').val()
 			});
+			$('#tt').datagrid({url:"dx_main.php"});
 		}
 
 		function saveItem(index){
@@ -91,7 +92,7 @@
 		</div>
 	</div>
     <div title = '续保信息' style="padding:10px; -moz-user-select:none;" unselectable="on" onselectstart="return false;" >
-	<table id="tt" class="easyui-datagrid" 	style="height:420px" url="dx_main.php" title="Searching" iconCls="icon-search" toolbar="#tb"   fitColumns="true" singleSelect="true"pagination="true">
+	<table id="tt" class="easyui-datagrid" 	style="height:420px" url="" title="Searching" iconCls="icon-search" toolbar="#tb"   fitColumns="true" singleSelect="true"pagination="true">
 		<thead>
 			<tr>
 				<th field="proposalno" width="80">投保单号</th>

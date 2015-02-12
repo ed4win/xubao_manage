@@ -3,7 +3,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="keywords" content="jquery,ui,easy,easyui,web">
 	<meta name="description" content="easyui help you build your web page easily!">
-	<title>续保信息查询</title>
+	<title>往期脱保信息查询</title>
 	<link rel="stylesheet" type="text/css" href="http://127.0.0.1/xubao_manage/jeasyui/themes/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="http://127.0.0.1/xubao_manage/jeasyui/themes/icon.css">
 	<link rel="stylesheet" type="text/css" href="http://127.0.0.1/xubao_manage/jeasyui/themes/demo.css">
@@ -33,17 +33,17 @@
 				}
 			});
 		});
-		function doSearch(){
+		function doSearch(){		
 			$('#tt').datagrid('load',{
 				engineno: $('#engineno').val(),
 				licenseno: $('#licenseno').val()
 			});
-			$('#tt').datagrid({url:"xubao_main.php"});
+			$('#tt').datagrid({url:"xubao_main_ex.php"});//解决加载easyUI 加载时自动加载数据的问题
 		}
 
 		function saveItem(index){
 			var row = $('#tt').datagrid('getRows')[index];
-			var url = row.isNewRecord ? 'save_user.php' : 'update_xubao.php?proposalno='+row.proposalno;
+			var url = row.isNewRecord ? 'save_user.php' : 'update_xubao_ex.php?proposalno='+row.proposalno;
 			$('#tt').datagrid('getRowDetail',index).find('form').form('submit',{
 				url: url,
 				onSubmit: function(){
@@ -83,7 +83,7 @@
 <!--   oncopy="alert('对不起，禁止复制！');return false;"  -->
 
 	<div class="demo-info" style="margin-bottom:10px">
-		<div id = "userinfo">续保专岗——客户信息查询12
+		<div id = "userinfo">续保专岗——客户信息查询
        <!-- <p id="p1" > </p> -->
 		<!-- -Enter search values and press search button中文中文.-->
 		 <script  type="text/javascript" src="info.php"></script>
@@ -92,9 +92,6 @@
 	</div>
     <div title = '续保信息' style="padding:10px; -moz-user-select:none;" unselectable="on" onselectstart="return false;" >
 	<table id="tt" class="easyui-datagrid" 	style="height:420px" url="" title="Searching" iconCls="icon-search" toolbar="#tb"   fitColumns="true" singleSelect="true"pagination="true">
-	<!--  加载table时自动加载数据
-	<table id="tt" class="easyui-datagrid" 	style="height:420px" url="xubao_main_ex.php" title="Searching" iconCls="icon-search" toolbar="#tb"   fitColumns="true" singleSelect="true"pagination="true">
-	-->
 		<thead>
 			<tr>
 				<th field="proposalno" width="80">投保单号</th>

@@ -16,6 +16,12 @@ define('IN_SYS', TRUE);
 	$engineno = isset($_POST['engineno']) ? mysql_real_escape_string($_POST['engineno']) : '123abcefg456';
 	$licenseno = isset($_POST['licenseno']) ? mysql_real_escape_string($_POST['licenseno']) : '123abc456efg';
 	//echo "tb-2333",$_POST['engineno'],"</br>";
+	if($engineno == null && $licenseno == null){
+		exit();
+	}
+	if($engineno == '' && $licenseno == ''){
+		exit();
+	}
 	$str_licen = strlen($licenseno);
 	$str_eng = strlen($engineno);
 	if($str_licen==12 && $str_eng==12){

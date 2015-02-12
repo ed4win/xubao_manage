@@ -15,15 +15,17 @@ define('IN_SYS', TRUE);
 	//mysql_real_escape_string() 防止依赖注入,但是要考虑连接的当前字符集
 	$engineno = isset($_POST['engineno']) ? mysql_real_escape_string($_POST['engineno']) : '123abcefg456';
 	$licenseno = isset($_POST['licenseno']) ? mysql_real_escape_string($_POST['licenseno']) : '123abc456efg';
-	//echo "tb-2333",$_POST['engineno'],"</br>";
 	if($engineno == null && $licenseno == null){
+		exit();
+	}
+	if($engineno == '' && $licenseno == ''){
 		exit();
 	}
 	$str_licen = strlen($licenseno);
 	$str_eng = strlen($engineno);
-	//if($str_licen==12 && $str_eng==12){
-	//	exit();
-	//}
+	if($str_licen==12 && $str_eng==12){
+		exit();
+	}
 	$userid = $_SESSION['userid'];
 	$username = $_SESSION['username'];
 	$usercode = $_SESSION['usercode'];
@@ -42,7 +44,7 @@ define('IN_SYS', TRUE);
 	
 	$result = array();
 	$where = '';
-	$tbflag ='and dmflag = "1" and  xbflag = "0" ' ;
+	$tbflag ='and tbflag = "1" and  xbflag = "0" ' ;
 
 	/*
 	//判断查询关键字,优先保存车牌号,放弃
@@ -62,13 +64,13 @@ define('IN_SYS', TRUE);
     if($user_com <>'441800')
    {
 	if($str_licen==0){
-		$where .=  "engineno = '$engineno' and     substr(comcode,1,6) in ('441810','441811','441812','441813','441814','441815','441884','441885')";
+		$where .=  "engineno = '$engineno' and     substr(comcode,1,6) = '$user_com'";
 	}
 	else if($str_eng==0){
-		$where .= " licenseno = '$licenseno'   and     substr(comcode,1,6) in ('441810','441811','441812','441813','441814','441815','441884','441885') ";
+		$where .= " licenseno = '$licenseno'   and     substr(comcode,1,6) = '$user_com' ";
 	}else//(strlen($licenseno) >0 &&　strlen($engineno)>0)
 	{
-		$where .= "engineno = '$engineno' and licenseno = '$licenseno'   and     substr(comcode,1,6) in ('441810','441811','441812','441813','441814','441815','441884','441885') ";
+		$where .= "engineno = '$engineno' and licenseno = '$licenseno'   and     substr(comcode,1,6) = '$user_com' ";
 	}
 }else{
 
@@ -84,9 +86,9 @@ define('IN_SYS', TRUE);
 }
 	//echo 'BUGBANG!',$where,'STR:',$str_eng,'--STR2:',$str_licen;
 	  
-	//$rs = mysql_query("select count(1) from xubaomain where " . $where . $tbflag)
+	//$rs = mysql_query("select count(1) from xubaomain_ex where " . $where . $tbflag)
 	//or die("无效查询: " . mysql_error());
-	$rs = $dbh->query("select count(1) from xubaomain where " . $where . $tbflag)
+	$rs = $dbh->query("select count(1) from xubaomain_ex where " . $where . $tbflag)
 	or die("无效查询: " . $rs->errorInfo());
 	//echo 'select ',$rs;
 	//$row = mysql_fetch_row($rs);
@@ -99,8 +101,8 @@ define('IN_SYS', TRUE);
 		}
 	$result["total"] = $row[0];
 	
-	//$rs = mysql_query("select * from xubaomain where " . $where . $tbflag . " limit $offset,$rows");
-	$rs = $dbh->query("select * from xubaomain where " . $where . $tbflag . " limit $offset,$rows");
+	//$rs = mysql_query("select * from xubaomain_ex where " . $where . $tbflag . " limit $offset,$rows");
+	$rs = $dbh->query("select * from xubaomain_ex where " . $where . $tbflag . " limit $offset,$rows");
 	$items = array();
 	//while($row = mysql_fetch_object($rs)){
 	while($row = $rs->fetchobject()){
