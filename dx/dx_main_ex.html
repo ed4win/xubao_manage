@@ -42,7 +42,7 @@
 
 		function saveItem(index){
 			var row = $('#tt').datagrid('getRows')[index];
-			var url = row.isNewRecord ? 'save_user.php' : 'update_dx.php?proposalno='+row.proposalno;
+			var url = row.isNewRecord ? 'save_user.php' : 'update_dx_ex.php?proposalno='+row.proposalno;
 			$('#tt').datagrid('getRowDetail',index).find('form').form('submit',{
 				url: url,
 				onSubmit: function(){
@@ -91,7 +91,7 @@
 		</div>
 	</div>
     <div title = '续保信息' style="padding:10px; -moz-user-select:none;" unselectable="on" onselectstart="return false;" >
-	<table id="tt" class="easyui-datagrid" 	style="height:420px" url="dx_main.php" title="Searching" iconCls="icon-search" toolbar="#tb"   fitColumns="true" singleSelect="true"pagination="true">
+	<table id="tt" class="easyui-datagrid" 	style="height:420px" url="dx_main_ex.php" title="Searching" iconCls="icon-search" toolbar="#tb"   fitColumns="true" singleSelect="true"pagination="true">
 		<thead>
 			<tr>
 				<th field="proposalno" width="80">投保单号</th>

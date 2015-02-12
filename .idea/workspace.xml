@@ -24,7 +24,78 @@
     <favorites_list name="xubao_manage" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="update_dx_ex.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dx/update_dx_ex.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33333334" vertical-offset="344" max-vertical-offset="1007">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <marker date="1423709463982" expanded="true" signature="599:745" placeholder="UPDATE xubao..." />
+                <marker date="1423709463982" expanded="true" signature="762:927" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="update_dx.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dx/update_dx.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.928571" vertical-offset="614" max-vertical-offset="1007">
+              <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+              <folding>
+                <marker date="1423716518203" expanded="true" signature="599:742" placeholder="UPDATE xubao..." />
+                <marker date="1423716518203" expanded="true" signature="759:924" placeholder="INSERT INTO ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dx_main_ex.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dx/dx_main_ex.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="24.642857" vertical-offset="690" max-vertical-offset="2394">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dx_main_ex.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dx/dx_main_ex.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="68.07143" vertical-offset="1906" max-vertical-offset="2185">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1423710011956" expanded="true" signature="2676:2716" placeholder="select count..xubaomain_ex..." />
+                <marker date="1423710011956" expanded="true" signature="2938:3115" placeholder="INSERT INTO ..." />
+                <marker date="1423710011956" expanded="true" signature="3337:3409" placeholder="select * fro..xubaomain_ex..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dx/show_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="57.0" vertical-offset="1596" max-vertical-offset="1900">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="operateInfo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/importCSV/operateInfo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.714286" vertical-offset="620" max-vertical-offset="1140">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -37,6 +108,8 @@
       <list>
         <option value="$PROJECT_DIR$/xubao/xubao_main.php" />
         <option value="$PROJECT_DIR$/importCSV/operateInfo.php" />
+        <option value="$PROJECT_DIR$/dx/dx_main.html" />
+        <option value="$PROJECT_DIR$/dx/update_dx.php" />
       </list>
     </option>
   </component>
@@ -125,6 +198,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xubao_manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xubao_manage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dx" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -164,6 +251,9 @@
       <BehatRunner />
       <method />
     </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -172,10 +262,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
-    <configuration default="false" name="xb" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xdebug" start_url="/xubao_manage/importCSV/operateInfo.php">
+    <configuration default="false" name="xb" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="xdebug" start_url="/xubao_manage/dx/update_dx_ex.php">
       <RunnerSettings RunnerId="PhpRunner" />
       <RunnerSettings RunnerId="PhpWebAppDebugRunner" />
       <ConfigurationWrapper RunnerId="PhpRunner" />
@@ -209,19 +296,19 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39965397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39965397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -263,18 +350,24 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/importCSV/operateInfo.php</url>
-          <line>44</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/dx/update_dx_ex.php</url>
+          <line>23</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/dx/dx_main_ex.html</url>
+          <line>43</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PhpWebAppRunConfigurationType">
         <watch expression=" $rowcount" />
         <watch expression="$row" />
         <watch expression="$items" />
+        <watch expression="$sql" />
       </configuration>
     </watches-manager>
   </component>
@@ -283,7 +376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="836">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -291,18 +383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2166">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1423337996866" expanded="true" signature="-1:-1" placeholder="select count..xubaomain..." />
-            <marker date="1423337996866" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1423337996866" expanded="true" signature="-1:-1" placeholder="select * fro..xubaomain..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/importCSV/operateInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3321918" vertical-offset="739" max-vertical-offset="1140">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -311,11 +391,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.1899643" vertical-offset="249" max-vertical-offset="2166">
           <caret line="104" column="5" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
-          <folding>
-            <marker date="1423337996866" expanded="true" signature="-1:-1" placeholder="select count..xubaomain..." />
-            <marker date="1423337996866" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1423337996866" expanded="true" signature="-1:-1" placeholder="select * fro..xubaomain..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -323,7 +399,72 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="836">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/importCSV/operateInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.714286" vertical-offset="620" max-vertical-offset="1140">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dx/show_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="57.0" vertical-offset="1596" max-vertical-offset="1900">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dx/dx_main_ex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="24.642857" vertical-offset="690" max-vertical-offset="2394">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dx/dx_main_ex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="68.07143" vertical-offset="1906" max-vertical-offset="2185">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1423710011956" expanded="true" signature="2676:2716" placeholder="select count..xubaomain_ex..." />
+            <marker date="1423710011956" expanded="true" signature="2938:3115" placeholder="INSERT INTO ..." />
+            <marker date="1423710011956" expanded="true" signature="3337:3409" placeholder="select * fro..xubaomain_ex..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dx/dx_main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61290324" vertical-offset="57" max-vertical-offset="2394">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dx/update_dx.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.928571" vertical-offset="614" max-vertical-offset="1007">
+          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+          <folding>
+            <marker date="1423716518203" expanded="true" signature="599:742" placeholder="UPDATE xubao..." />
+            <marker date="1423716518203" expanded="true" signature="759:924" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dx/update_dx_ex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="344" max-vertical-offset="1007">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <marker date="1423709463982" expanded="true" signature="599:745" placeholder="UPDATE xubao..." />
+            <marker date="1423709463982" expanded="true" signature="762:927" placeholder="INSERT INTO ..." />
+          </folding>
         </state>
       </provider>
     </entry>

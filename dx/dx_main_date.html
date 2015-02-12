@@ -3,7 +3,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="keywords" content="jquery,ui,easy,easyui,web">
 	<meta name="description" content="easyui help you build your web page easily!">
-	<title>电销-脱保信息查询</title>
+	<title>电销-续保信息查询</title>
 	<link rel="stylesheet" type="text/css" href="http://127.0.0.1/xubao_manage/jeasyui/themes/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="http://127.0.0.1/xubao_manage/jeasyui/themes/icon.css">
 	<link rel="stylesheet" type="text/css" href="http://127.0.0.1/xubao_manage/jeasyui/themes/demo.css">
@@ -35,8 +35,8 @@
 		});
 		function doSearch(){
 			$('#tt').datagrid('load',{
-				stdate: $('#stdate').datebox("getValue"),
-				eddate: $('#eddate').datebox("getValue")
+				engineno: $('#engineno').val(),
+				licenseno: $('#licenseno').val()
 			});
 		}
 
@@ -73,26 +73,8 @@
 		if(login == '0')
 			{
 				alert ("你未登录,请先登录系统.");
-				location.href = '../user_reg/login.html';}
+				location.href = '/xubao_manage/user_reg/login.html';}
 	}	
-	function myformatter(date){
-            var y = date.getFullYear();
-            var m = date.getMonth()+1;
-            var d = date.getDate();
-            return y+'-'+(m<10?('0'+m):m)+'-'+(d<10?('0'+d):d);
-        }
-function myparser(s){
-            if (!s) return new Date();
-            var ss = (s.split('-'));
-            var y = parseInt(ss[0],10);
-            var m = parseInt(ss[1],10);
-            var d = parseInt(ss[2],10);
-            if (!isNaN(y) && !isNaN(m) && !isNaN(d)){
-                return new Date(y,m-1,d);
-            } else {
-                return new Date();
-            }
-        }
 	</script>
 </head>
 
