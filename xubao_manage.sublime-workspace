@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"data",
+				"datagrid"
+			],
+			[
 				"ed",
 				"eddate1"
 			],
@@ -79,7 +83,31 @@
 			"file": "xubao/xubao_main.html",
 			"settings":
 			{
-				"buffer_size": 4229,
+				"buffer_size": 4488,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dx/dx_main.html",
+			"settings":
+			{
+				"buffer_size": 4262,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dx/dx_main_ex.html",
+			"settings":
+			{
+				"buffer_size": 4268,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "importCSV/operateInfo.html",
+			"settings":
+			{
+				"buffer_size": 5064,
 				"line_ending": "Windows"
 			}
 		},
@@ -87,7 +115,7 @@
 			"file": "xubao/xubao_main.php",
 			"settings":
 			{
-				"buffer_size": 3466,
+				"buffer_size": 3521,
 				"line_ending": "Windows"
 			}
 		},
@@ -95,7 +123,7 @@
 			"file": "xubao/xubao_main_ex.php",
 			"settings":
 			{
-				"buffer_size": 3432,
+				"buffer_size": 3487,
 				"line_ending": "Windows"
 			}
 		},
@@ -103,7 +131,7 @@
 			"file": "xubao/xubao_main_ex.html",
 			"settings":
 			{
-				"buffer_size": 4237,
+				"buffer_size": 4296,
 				"line_ending": "Windows"
 			}
 		},
@@ -119,7 +147,7 @@
 			"contents": "<?php\nif(!isset($_POST['submit'])){\n	exit('非法访问!');\n}\n$username = $_POST['username'];\n$password = $_POST['password'];\n$comcode = $_POST['comcode'];\n//注册信息判断\nif(!preg_match('/^[\\w\\x80-\\xff]{3,15}$/', $username)){\n	exit('错误：用户名不符合规定。<a href=\"javascript:history.back(-1);\">返回</a>');\n}\nif(strlen($password) < 6){\n	exit('错误：密码长度不符合规定。<a href=\"javascript:history.back(-1);\">返回</a>');\n}\nif(strlen($comcode) <> 6){\n	exit('错误：归属机构长度不符合规定。<a href=\"javascript:history.back(-1);\">返回</a>');\n}\n//if(!preg_match('/^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$/', $comcode)){\n//	exit('错误：电子邮箱格式错误。<a href=\"javascript:history.back(-1);\">返回</a>');\n//}\ndefine('IN_SYS', TRUE);\n//包含数据库连接文件\ninclude('../conn.php');\n//检测用户名是否已经存在\n$check_query = mysql_query(\"select userid from user where username='$username' limit 1\");\nif(mysql_fetch_array($check_query)){\n	echo '错误：用户名 ',$username,' 已存在。<a href=\"javascript:history.back(-1);\">返回</a>';\n	exit;\n}\n//写入数据\n$password = MD5($password);\ninclude('../checkip.php');\n$IP = getip();\necho $IP;\n$sql = \"INSERT INTO user(username,password,comcode,ip)VALUES('$username','$password','$comcode','$IP')\";\nif(mysql_query($sql,$conn)){\n//echo $sql, '<br />';\n	exit('用户注册成功！点击此处 <a href=\"login.html\">登录</a>');\n} else {\n	echo '抱歉！添加数据失败：',mysql_error(),'<br />';\n    //echo $sql, '<br />';\n	echo '点击此处 <a href=\"javascript:history.back(-1);\">返回</a> 重试';\n}\n?>\n",
 			"file": "user_reg/reg.php",
 			"file_size": 1546,
-			"file_write_time": 130676034312194599,
+			"file_write_time": 130681995329845365,
 			"settings":
 			{
 				"buffer_size": 1365,
@@ -194,6 +222,7 @@
 	[
 		"/E/phpStudy/WWW/xubao_manage",
 		"/E/phpStudy/WWW/xubao_manage/dx",
+		"/E/phpStudy/WWW/xubao_manage/importCSV",
 		"/E/phpStudy/WWW/xubao_manage/jeasyui",
 		"/E/phpStudy/WWW/xubao_manage/user_reg",
 		"/E/phpStudy/WWW/xubao_manage/xubao"
@@ -618,7 +647,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -627,15 +656,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4229,
+						"buffer_size": 4488,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								3313,
+								3328
 							]
 						],
 						"settings":
@@ -645,27 +674,117 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 600.0,
+						"translation.y": 1560.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "xubao/xubao_main.php",
+					"file": "dx/dx_main.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3466,
+						"buffer_size": 4262,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								646,
-								692
+								3356,
+								3356
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1560.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "dx/dx_main_ex.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3362,
+								3362
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1620.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "importCSV/operateInfo.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5064,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3834,
+								3834
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2160.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "xubao/xubao_main.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3521,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								759,
+								759
 							]
 						],
 						"settings":
@@ -678,24 +797,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 5,
 					"file": "xubao/xubao_main_ex.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3432,
+						"buffer_size": 3487,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								725,
-								725
+								713,
+								660
 							]
 						],
 						"settings":
@@ -705,27 +824,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 6,
 					"file": "xubao/xubao_main_ex.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4237,
+						"buffer_size": 4296,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1598,
-								1598
+								3361,
+								3361
 							]
 						],
 						"settings":
@@ -735,14 +854,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 420.0,
+						"translation.y": 1675.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
 					"file": "xb_index.html",
 					"semi_transient": false,
 					"settings":
@@ -768,11 +887,11 @@
 						"translation.y": 1380.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 8,
 					"file": "user_reg/reg.php",
 					"semi_transient": false,
 					"settings":
